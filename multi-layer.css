@@ -1,0 +1,233 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    background-color: #f1f0d9;
+    font-family: Helvetica;
+    line-height: 1.5;
+    padding-top: 700px;
+}
+#site-header {
+    position: fixed;       
+    top: 0;
+    left: 0;
+    width: 100%;                 
+    display: flex;
+    justify-content: flex-end; 
+    z-index: 1000;
+    align-items: center;
+    padding: 4vh 4vh;
+    background-color: #f1f0d9;
+    transition: border 0.3s ease, background 0.3s ease;
+}
+#site-header.scrolled {
+    border-bottom: 1px solid blue;
+}
+#main-nav {
+    position: fixed;      
+    top: 2vh;
+    bottom: 4vh;               
+    right: 4vh;
+    z-index: 2000;
+}    
+#main-nav ul {
+    list-style: none;
+    display: flex;
+    gap: 3vw;
+    margin: 0;
+    padding: 0;
+}
+#main-nav ul li a {
+    text-decoration: none;
+    color: blue;
+    font-size: 1.3vw;
+    font-weight: 500;
+}
+#main-nav ul li a:hover {
+    color: #e7c000;
+}
+#top-image {
+    position: absolute; 
+    top: 25px;
+    bottom: 25px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 1000px;; 
+    z-index: 1100;
+    transition: all 0.3s ease;
+}
+#top-image.scrolled {
+    position: fixed;
+    top: 10px;
+    left: 50%;
+    transform: translate(-50%) scale(0.5);
+    width: auto;
+    z-index: 2000;
+}
+#bg-image-1, #bg-image-2 {
+    position: absolute;
+    top: 96px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 85%;
+    max-width: 900px;
+    height: auto;
+}
+#bg-image-2 {
+    z-index: 500; 
+}
+#bg-image-1 {
+    z-index: 1150; 
+    transition: opacity 0.2s ease
+}
+#bg-image-1.hidden {
+    opacity: 0;
+    pointer-events: none; 
+}
+#content-wrapper {
+    max-width: 1300px;
+    margin: 0 auto;
+    padding-bottom: 5vh;
+}
+#main-content h1,
+#main-content h2,
+#main-content h3,
+#main-content p {
+    margin-left: 3vw;
+    margin-right: 3vw;
+}
+#main-content h1 {
+    text-align: center;
+    font-size: 3.5vw;
+    font-weight: 500;
+    margin-top: 4vh;
+    margin-bottom: 4vh;
+}
+#main-content1 {
+    width: 75%;    
+    margin: 0 auto 10vh auto;
+    text-align: left;
+    font-size: 2vw;
+    font-weight: 300;
+}
+#main-content2{
+    text-align: left;
+    font-size: 1.5vw;
+    font-weight: 500;
+    margin-bottom: 10vh;
+}
+#main-content h2 {
+    font-size: 3vw;
+    font-weight: 500;
+    margin-top: 0; 
+    margin-bottom: 5vh;
+}
+#main-content h3 {
+    font-size: 1vw;
+    font-weight: 500;
+    margin-bottom: 2vh;
+    margin-top: 2vh;
+    margin-left: 10;
+}
+.two-column {
+    display: flex;            
+    gap: 6vw;
+    align-items: flex-start;
+    margin-top: 0;
+    flex-wrap: wrap;
+    padding: 0 5vw;
+    width: 100%
+}
+.two-column .left {
+    flex: 0 0 35%; 
+    min-width: 250px; 
+}
+.two-column .right {
+    flex: 1;
+    min-width: 300px;
+}
+.two-column .right table {
+    width: 100%;
+    border-collapse: collapse;
+}
+.two-column .right table td {
+    font-size: 1.3rem;
+    padding: 1rem;
+    vertical-align: top;
+}
+.two-column .right table td:first-child {
+    font-weight: 500;
+    width: 30%;
+}
+.two-column .right table td:last-child {
+    width: 70%;
+}
+#main-content ul {
+    font-size: 1.5rem;
+    font-weight: 300;
+    line-height: 1.8;
+    padding-left: 3vw;
+    margin-top: 0;
+    margin-bottom: 10vh;
+    width: 90%;
+}
+.list-pair {
+    display: flex;
+    gap: 2vw;
+    padding: 0 3vw;
+    margin-top: 0vh;
+    align-items: flex-start;
+    margin-left: auto;
+    margin-right: auto;
+}
+.list-pair .left-column,
+.list-pair .right-column {
+    flex: 1;
+    min-width: 280px;
+}
+#link { 
+    font-size: 1rem;
+    text-align: center;
+    margin-top: 5vh;
+    margin-bottom: -0.5vh;
+}
+#site-footer { 
+    background-color: #dcdf4d; 
+    padding: 20px; 
+    text-align: center; 
+    font-size: 0.8rem; 
+}
+@media (max-width: 900px) {
+    .two-column {
+        flex-direction: column;
+        gap: 4vh;
+        padding: 0 5vw;
+    }
+    .list-pair {
+        flex-direction: column;
+        gap: 3vh;
+    }
+    #main-content h1 { font-size: 7vw; }
+    #main-content h2 { font-size: 5vw; }
+    #main-content h3 { font-size: 4vw; }
+    #main-content ul,
+    #main-content ol,
+    #main-content p {
+        font-size: 4vw;
+    }
+}
+@media (max-width: 600px) {
+    #site-header {
+        flex-direction: column;
+        text-align: center;
+        gap: 10px;
+    }
+    #main-nav ul {
+        gap: 15px;
+    }
+    body {
+        padding-top: 160px;
+    }
+}
