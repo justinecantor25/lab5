@@ -7,7 +7,7 @@ body {
     background-color: #f1f0d9;
     font-family: Helvetica;
     line-height: 1.5;
-    padding-top: 700px;
+    padding-top: 100vh;
 }
 #site-header {
     position: fixed;       
@@ -54,7 +54,7 @@ body {
     bottom: 25px;
     left: 50%;
     transform: translateX(-50%);
-    width: 1000px;; 
+    width: 80vw;; 
     z-index: 1100;
     transition: all 0.3s ease;
 }
@@ -72,7 +72,7 @@ body {
     left: 50%;
     transform: translateX(-50%);
     width: 85%;
-    max-width: 900px;
+    max-width: 80vw;
     height: auto;
 }
 #bg-image-2 {
@@ -87,7 +87,7 @@ body {
     pointer-events: none; 
 }
 #content-wrapper {
-    max-width: 1300px;
+    max-width: 90vw;
     margin: 0 auto;
     padding-bottom: 5vh;
 }
@@ -142,11 +142,11 @@ body {
 }
 .two-column .left {
     flex: 0 0 35%; 
-    min-width: 250px; 
+    min-width: 20vw; 
 }
 .two-column .right {
     flex: 1;
-    min-width: 300px;
+    min-width: 25vw;
 }
 .two-column .right table {
     width: 100%;
@@ -185,7 +185,7 @@ body {
 .list-pair .left-column,
 .list-pair .right-column {
     flex: 1;
-    min-width: 280px;
+    min-width: 22vw;
 }
 #link { 
     font-size: 1rem;
@@ -195,7 +195,7 @@ body {
 }
 #site-footer { 
     background-color: #dcdf4d; 
-    padding: 20px; 
+    padding: 1.5vw; 
     text-align: center; 
     font-size: 0.8rem; 
 }
@@ -228,6 +228,6 @@ body {
         gap: 15px;
     }
     body {
-        padding-top: 160px;
+        padding-top: 10vh;
     }
 }
